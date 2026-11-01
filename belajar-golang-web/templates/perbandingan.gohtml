@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>{{.Title}}</title>
+  </head>
+  <body>
+    <h1>Hello {{.Name}}</h1>
+    {{if ge .FinalValue 90}}
+      <h2>I'm From {{.Address.Region}} exactly in {{.Address.City}}</h2>
+    {{else if .Action}}
+      <h2>I'm on {{.Action}} to spain</h2>
+    {{else}}
+      <h2>It's Secret</h2>
+    {{end}}
+  </body>
+</html>

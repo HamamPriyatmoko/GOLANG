@@ -47,7 +47,7 @@ func main (){
 	fmt.Println(daySlice2)
 	fmt.Println(days)
 
-
+	// Cara membuat slice baru panjang datanya 2 tapi kapasitas yang bisa ditampung 5
 	var newSlice []string = make([]string, 2, 5)
 	// var newSlice []string = make([]string, SIZE, CAPACITY)
 	newSlice[0] = "Hamam"

@@ -1,0 +1,14 @@
+{{/* Agar saat kita memanggil nama templatenya lebih mudah kita bisa gunakan define 
+    untuk menentukan nama tamplatenya sendiri dan jangan lupa untuk menambahkan end diakhir */}}
+{{define "layout"}}
+{{/*Dengan menambahkan titik dibelakangnya maka 
+    artinya semua datanya dikirim ke template header*/}}
+{{template "header.gohtml" .}}
+<h1>Hello {{.Name}}</h1>
+{{template "footer.gohtml"}}
+{{end}}
+
+{{/* Dadalm satu file kita bisa mendefinisikan 2 template layout*/}}
+{{define "test"}}
+<h1>Coba Saja</h1>
+{{end}}
