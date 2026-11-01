@@ -7,7 +7,7 @@ import "fmt"
 // }
 
 // Type Assertions adalah kemampuan merubah tipe data interface kosong ke tipe data lainnya
-// artinya adalah kita bisa return data apapun terserah kita jika kita 
+// artinya adalah kita bisa return data apapun terserah kita jika kita
 // deklarasikan type returnya interface{} (interface kosong)
 func random() interface{} {
 	return "OK"
@@ -17,13 +17,14 @@ func angka() int {
 	return 10
 }
 
-func main()  {
+func main() {
 	var result any = random()
 	fmt.Println(result)
 	var jumlah any = angka()
 	// value untuk menyimpan nilainya
-	// ok untuk menyimpan informasi jika gagal dilakukan konversi dengan tipe data yang dikembalikan boolean
-	value, ok := jumlah.(int16) 
+	// ok: boolean indikator status assertion (true jika berhasil, false jika gagal) maksudnya
+	// indikator status apakah assertionnya berhasil atau gagal
+	value, ok := jumlah.(int16)
 	fmt.Println(value, ok)
 
 	// var resultString string = result.(string)
